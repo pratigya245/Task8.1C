@@ -27,7 +27,8 @@ pipeline {
                 echo 'Tool: SonarQube'
             }
         }
-stage('Security Scan') {
+
+        stage('Security Scan') {
             steps {
                 echo 'Stage 4: Security Scan - Identify security vulnerabilities in the code.'
                 echo 'Tool: OWASP Dependency-Check or Snyk'
@@ -62,6 +63,6 @@ stage('Security Scan') {
         }
         failure {
             echo 'Pipeline failed. Please check the logs.'
-        }
-    }
+        }
+    }
 }
